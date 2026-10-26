@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MP3</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app">
+    <div class="track-header">
+      <div id="videoTitle" class="track-title">Suche YouTube-Tab...</div>
+    </div>
+
+    <!-- Fallback if not on YouTube -->
+    <div id="manualWrapper" class="manual-input" style="display: none;">
+      <input type="text" id="manualUrl" placeholder="YouTube-Link hier einfügen..." spellcheck="false" autocomplete="off">
+    </div>
+
+    <!-- Unified Pure Glass Capsule Button -->
+    <button id="downloadBtn" class="glass-btn">
+      <div id="pillProgress" class="btn-progress"></div>
+      <span id="pillLabel" class="btn-text">MP3 herunterladen</span>
+    </button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

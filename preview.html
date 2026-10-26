@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Preview</title>
+  <link rel="stylesheet" href="extension/popup.css">
+  <style>
+    body {
+      width: 100vw;
+      height: 100vh;
+      background: #08080b;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      padding: 30px;
+      box-sizing: border-box;
+    }
+
+    .preview-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .preview-label {
+      font-size: 11px;
+      font-weight: 600;
+      color: #71717a;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .window-frame {
+      width: 290px;
+      background: #0f1013;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 16px;
+      padding: 16px 18px;
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.9);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- State 1: Normal -->
+  <div class="preview-card">
+    <div class="preview-label">1. Bereit</div>
+    <div class="window-frame">
+      <div class="app">
+        <div class="track-header">
+          <div class="track-title">The Weeknd - Blinding Lights</div>
+        </div>
+        <button class="glass-btn">
+          <div class="btn-progress" style="width: 0%;"></div>
+          <span class="btn-text">MP3 herunterladen</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- State 2: In Progress -->
+  <div class="preview-card">
+    <div class="preview-label">2. Download läuft</div>
+    <div class="window-frame">
+      <div class="app">
+        <div class="track-header">
+          <div class="track-title">The Weeknd - Blinding Lights</div>
+        </div>
+        <button class="glass-btn">
+          <div class="btn-progress" style="width: 65%;"></div>
+          <span class="btn-text">65%</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- State 3: Done -->
+  <div class="preview-card">
+    <div class="preview-label">3. Gespeichert</div>
+    <div class="window-frame">
+      <div class="app">
+        <div class="track-header">
+          <div class="track-title">The Weeknd - Blinding Lights</div>
+        </div>
+        <button class="glass-btn">
+          <div class="btn-progress" style="width: 100%;"></div>
+          <span class="btn-text">✓ In Downloads</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
